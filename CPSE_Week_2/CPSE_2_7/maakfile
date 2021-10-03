@@ -1,0 +1,21 @@
+gcc := g++ -std=c++17
+
+build:
+		generator.exe
+clean:
+		rm -f *.exe *.o
+
+run:	generator.exe      
+		./generator.exe 
+
+melody.cpp:	generator.exe      
+		./generator.exe
+
+generator.exe: generator.o rtttl_player.o 
+	$(gcc) generator.o rtttl_player.o -o generator.exe
+
+generator.o: generator.cpp note.hpp note_player_terminal.hpp fur_elise.hpp rtttl_player.hpp
+	$(gcc) -c generator.cpp -o generator.o 
+
+rtttl_player.o: rtttl_player.cpp rtttl_player.hpp
+	$(gcc) -c rtttl_player.cpp -o rtttl_player.o
