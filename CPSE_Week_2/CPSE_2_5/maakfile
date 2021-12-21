@@ -1,8 +1,8 @@
 gcc := g++ -std=c++17
 
-build:
-		generator.exe
-clean:
+build:  generator.exe
+
+clean:  
 		rm -f *.exe *.o
 
 run:	generator.exe      
