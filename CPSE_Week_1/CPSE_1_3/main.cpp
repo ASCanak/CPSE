@@ -1,9 +1,9 @@
 #include "hwlib.hpp"
 
 extern "C" char toggle_case( char c ){
-   if(c >= 65 && c <= 90)
+   if(c >= 'A' && c <= 'Z')
       c += 32;
-   else if(c >= 97 && c <= 122)
+   else if(c >= 'a' && c <= 'z')
       c -= 32;
    return c;
 }
