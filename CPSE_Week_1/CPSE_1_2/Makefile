@@ -17,7 +17,8 @@ HEADERS :=
 # other places to look for files for this project
 SEARCH  := 
 
+SERIAL_PORT := /dev/ttyACM0
 # set REATIVE to the next higher directory 
 # and defer to the Makefile.due there
-RELATIVE := $(RELATIVE)../
+RELATIVE := ../$(RELATIVE)../
 include $(RELATIVE)Makefile.due
