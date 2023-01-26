@@ -4,8 +4,8 @@
 void note_player_gpio::play( const note & n ){
    if( n.frequency == 0 ){
       hwlib::wait_us( n.duration );
-  
-   } else {
+   } 
+   else {
       auto half_period = 1'000'000 / ( 2 * n.frequency );    
       auto end = hwlib::now_us() + n.duration;
       do { 

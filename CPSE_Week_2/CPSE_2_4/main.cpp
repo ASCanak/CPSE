@@ -19,8 +19,8 @@ int main( void ){
    p.open();
       if( 0 ){ auto fe = fur_elise(); fe.play( p );}      
       if( 0 ){ rtttl_play( p, sos ); }   
-      if( 0 ){ rtttl_play( p, let_it_be );  }
-      if( 1 ){ rtttl_play( p, muppets );  }
+      if( 1 ){ rtttl_play( p, let_it_be );  }
+      if( 0 ){ rtttl_play( p, muppets );  }
       if( 0 ){ rtttl_play( p, rickroll );  }
       if( 0 ){ rtttl_play( p, one );  }
    p.close();
