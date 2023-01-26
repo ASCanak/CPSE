@@ -19,5 +19,5 @@ SEARCH  :=
 
 # set REATIVE to the next higher directory 
 # and defer to the Makefile.due there
-RELATIVE := $(RELATIVE)../
+RELATIVE := ../$(RELATIVE)../
 include $(RELATIVE)Makefile.native

@@ -1,0 +1,15 @@
+gcc := g++ -std=c++17
+
+build:
+		generator.exe
+clean:
+		rm -f *.exe *.o compressed.asm
+
+run:	generator.exe      
+		./generator.exe 
+
+generator.exe: generator.o 
+	$(gcc) generator.o -o generator.exe
+
+generator.o: generator.cpp compressor.hpp match.hpp wilhelmus.txt
+	$(gcc) -c generator.cpp -o generator.o 
